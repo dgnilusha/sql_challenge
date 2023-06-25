@@ -1,9 +1,9 @@
 # sql_challenge
 
 Pewlett Hackard Employee Database Research Project( SQL challenge)
-This project focuses on conducting a research analysis on the employees of Pewlett Hackard during the 1980s and 1990s. The available data for this research is stored in six CSV files.
+This challenge focuses on conducting a research analysis on the employees of Pewlett Hackard during the 1980s and 1990s. The available data for this research is stored in six CSV files.
 
-The goal of this project is to design appropriate database tables to hold the data from the CSV files, import the CSV files into a SQL database, and then perform data analysis to answer questions about the employee data.
+The goal of this challenge is to design appropriate database tables to hold the data from the CSV files, import the CSV files into a SQL database, and then perform data analysis to answer questions about the employee data.
 
 Data Modeling
 To represent the employee data from the CSV files, the following tables have been designed:
@@ -17,7 +17,7 @@ salaries: Stores information about the employee salaries.
 Data Engineering
 To import the data from the CSV files into a SQL database, perform the following steps:
 
-Create a new database in  preferred SQL database management system (e.g., PostgreSQL, MySQL).
+Create a new database in  a preferred SQL database management system (e.g., PostgreSQL, MySQL).
 Execute the SQL scripts provided in the "create_tables.sql" file to create the necessary tables in the database.
 Use an appropriate method (e.g., SQL COPY command, database management tool) to import the data from the CSV files into the corresponding tables.
 Verify that the data has been successfully imported by running SQL queries against the tables.
@@ -36,4 +36,4 @@ List the frequency counts, in descending order, of all employee last names (i.e.
 
 Conclusion
 
-By following the steps outlined in this README file, can successfully perform the data modeling, data engineering, and data analysis tasks for the Pewlett Hackard employee database research project. 
+By following the steps outlined in this README file, can successfully perform the data modeling, data engineering, and data analysis tasks for the Pewlett Hackard employee database research project.( challenge) 
