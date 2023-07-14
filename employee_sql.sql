@@ -1,34 +1,44 @@
+
+#resubmit the assignment
+
 CREATE TABLE departments (
-	dept_no	varchar(5) PRIMARY KEY,
-	dept_name varchar (20) NOT NULL
-	
+	dept_no varchar(5) PRIMARY KEY,
+	dept_name varchar(20) NOT NULL
 );
+
 
 CREATE TABLE dept_emp (
-	emp_no	INT ,
-	dept_no varchar(5) NOT NUll
+	emp_no INT foreign key,
+	dept_no varchar(5) NOT NULL,
+	FOREIGN KEY (emp_no) REFERENCES employees (emp_no),
+	FOREIGN KEY (dept_no) REFERENCES departments (dept_no)
 );
 
+
 CREATE TABLE dept_manager (
-	dept_no	varchar(5),
-	emp_no int
+	dept_no varchar(5),
+	emp_no int,
+	FOREIGN KEY (emp_no) REFERENCES employees (emp_no),
+	FOREIGN KEY (dept_no) REFERENCES departments (dept_no)
 );
 
 CREATE TABLE employees (
-	emp_no	INT PRIMARY KEY,
+	emp_no INT PRIMARY KEY,
 	emp_title_id varchar(7),
 	birth_date date,
-	first_name varchar(10) not null, 
+	first_name varchar(10) NOT NULL, 
 	last_name varchar(20) NOT NULL,
 	sex varchar(1) NOT NULL,
 	hire_date date
 );	
 
-CREATE TABLE salaries (
-	emp_no	INT PRIMARY KEY,
-	salary int
-);
 
+CREATE TABLE salaries (
+	emp_no INT,
+	salary int,
+	PRIMARY KEY (emp_no),
+	FOREIGN KEY (emp_no) REFERENCES employees (emp_no)
+);
 
 CREATE TABLE titles (
 	title_id varchar PRIMARY KEY,
@@ -37,6 +47,7 @@ CREATE TABLE titles (
 
 select *
 from salaries;
+
 
 --Q1 answer
 select e.emp_no, e.last_name, e.first_name, e.sex, s.salary
@@ -101,3 +112,38 @@ SELECT last_name, COUNT(*) AS frequency
 FROM employees
 GROUP BY last_name
 ORDER BY frequency DESC;
+
+--
+
+
+
+
+
+
+
+
+
+
+CREATE TABLE employees (
+	emp_no	INT PRIMARY KEY,
+	emp_title_id varchar(7),
+	birth_date date,
+	first_name varchar(10) not null, 
+	last_name varchar(20) NOT NULL,
+	sex varchar(1) NOT NULL,
+	hire_date date
+);	
+
+CREATE TABLE salaries (
+	emp_no	INT PRIMARY KEY,
+	salary int
+);
+
+
+CREATE TABLE titles (
+	title_id varchar PRIMARY KEY,
+	title varchar(7) NOT NULL
+);
+
+select *
+from salaries;
